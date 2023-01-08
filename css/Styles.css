@@ -1,6 +1,4 @@
 body {
-    /* width: 1600px;
-    height: 2410px; */
     font-size: 14px;
     font-family: "roboto", sans-serif;
     letter-spacing:  10px;
@@ -16,16 +14,6 @@ body {
     --background-2:       #2F303A;
     --hover-color:        #2196F3;
 }
-
-/* header, nav{
-display: inline-flex;
-}
-.nav-list{
-    display: inline-flex;
-}
-.contact-list{
-    display: inline-flex;
-} */
 
 .list{
     list-style: none;   
@@ -69,13 +57,6 @@ display: inline-flex;
 .link:hover,.link:focus {
     color: var(--hover-color);
 }
-
-/* ----------Main---------- */
-/* .products-list,.Characters-list,.team-list {
-    display: flex;      
-} */
-
-/* seccion titulo */
 
 .section-title{
     text-align: center;
@@ -144,8 +125,6 @@ display: inline-flex;
 
 .team-list-img{
     background-color: var(--background-color);
-    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
-    /* border-radius: 0px 0px 4px 4px; */
 }
 
 .team-list-name{
@@ -192,8 +171,6 @@ display: inline-flex;
     cursor: pointer;
     font-family: inherit;
     border: none;
-    /* left: calc(50% - 128px/2 - 160px);
-    top: calc(50% - 38px/2 - 735px);  */
     background: var(--background-botton);
     border-radius: 4px;
     font-weight: 500;
@@ -209,10 +186,9 @@ display: inline-flex;
 }
 
 .briefcase-list-item {
-    /* box-sizing: border-box; */
     cursor: pointer;
     background: var(--background-1);
-     border: 1px solid var(--background-botton); 
+    border: 1px solid var(--background-botton); 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); 
 }
 
