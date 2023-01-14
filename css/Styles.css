@@ -83,13 +83,7 @@ ul{
 /* ---------------------- Main ---------------------- */
 /* -------------------------------------------------- */
 
-/* .parent{
-    display: flex;
-    justify-content: space-between;
-}
-.parent .child{
-    display: block;
-} */
+/* ------------------ seccion titulo ---------------- */
 
 
 .main-title{
@@ -110,9 +104,35 @@ ul{
 .main-title .button-index{
     display: block;
     padding: 10px 32px;
-    /* width: 261px; */
-    /* height: 50px; */
 }
+
+/* ------------------ seccion caracteristicas ---------------- */
+
+.main-craracters, .Characters-list{
+    display: flex;
+    padding: 0;
+}
+.Characters-list{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Characters-list .characters-list-title{
+    display: block;
+    width: 270px;
+    padding-bottom: 10px;
+}
+.Characters-list .characters-list-text{
+    display: block;
+    align-items: baseline;
+    width: 270px;
+    /* border: #212121 1px solid; */
+}
+.craracters-list .Characters-list-text:not(:last-child),
+.Characters-list.characters-list-title:not(:last-child){
+    margin-right: 30px;
+}
+
 
 
 
@@ -227,7 +247,7 @@ ul{
     text-transform: uppercase;
 }
 
-.charecters-list-text{
+.characters-list-text{
     line-height: 1.7;
     color: var(--gray-color);
 }
