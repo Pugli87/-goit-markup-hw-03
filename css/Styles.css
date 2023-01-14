@@ -97,18 +97,21 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .main-title .page-title{
+    display: block;
     width: 696px;
     height: 120px;
+    margin-bottom: 30px;
 }
 .main-title .button-index{
     display: block;
-    width: 197px;
-    height: 30px;
+    padding: 10px 32px;
+    /* width: 261px; */
+    /* height: 50px; */
 }
 
 
@@ -195,6 +198,7 @@ ul{
     font-size: 44px;
     line-height: 1.3;
     text-transform: uppercase;
+    padding: 10px 32px;
 }
 
 .button-index {
