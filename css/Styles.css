@@ -1,9 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
+    width: 1600px;
     font-size: 14px;
     font-family: "roboto", sans-serif;
     letter-spacing:  10px;
     color: var(--body-color);
-    background:var(--background-1);    
+    background:var(--background-1);
 }
 
 :root {
@@ -15,15 +21,119 @@ body {
     --hover-color:        #2196F3;
 }
 
-.list{
-    list-style: none;   
+ul{
+    list-style: none;
 }
 
-.logo,.nav-list-link, .contact-list-link, .footer-contact-list-item{
+.logo,.menu-list-link, .contact-list-link, .footer-contact-list-item{
     text-decoration: none;
 }
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 
-/* ----------cabecera---------- */
+.section{
+    display: flex;
+    padding-top: 94px ;
+    padding-bottom: 94px ;
+}
+
+/* ------------------------------------------------------------- */
+/* <------------------------> Flexbox <------------------------> */
+/* ------------------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* --------------------- Header --------------------- */
+/* -------------------------------------------------- */
+
+.cab{
+    padding-top: 31.25px ;
+    padding-bottom: 31.25px ;
+    width: 100%;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.cab .menu, .cab .contact-list{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.cab .menu{   
+    justify-content: space-around;
+}
+
+.cab .contact-list{
+    justify-content: flex-end;
+}
+
+.header-cont, .menu-list{
+    display: flex;
+}
+
+.menu-list > .menu-list-item:not(:last-child),
+.contact-list > .contact-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* -------------------------------------------------- */
+/* ---------------------- Main ---------------------- */
+/* -------------------------------------------------- */
+
+/* .parent{
+    display: flex;
+    justify-content: space-between;
+}
+.parent .child{
+    display: block;
+} */
+
+
+.main-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.main-title .page-title{
+    width: 696px;
+    height: 120px;
+}
+.main-title .button-index{
+    display: block;
+    width: 197px;
+    height: 30px;
+}
+
+
+
+
+
+
+/* -------------------------------------------------- */
+/* --------------------- Footer --------------------- */
+/* -------------------------------------------------- */
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+
+/* ------------------------------------------------------------- */
+/* ------------------------- cabecera -------------------------- */
+/* ------------------------------------------------------------- */
+
 .logo {
     color: var(--hover-color);
     font-family: 'Raleway';
@@ -35,7 +145,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-.nav-list-link{
+.menu-list-link{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -45,7 +155,7 @@ body {
 
 .select { /*color de seleccion de pagina html*/
     color: var(--hover-color);
-} 
+}
 
 .contact-list-link{  /* estilos de correo y telefono*/
     font-weight: 500;
@@ -58,15 +168,31 @@ body {
     color: var(--hover-color);
 }
 
-.section-title{
+/* ------------------------------------------------------------- */
+/* -------------------- Cuerpo de la pagina -------------------- */
+/* ------------------------------------------------------------- */
+
+.name-section{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
     text-align: center;
+    letter-spacing: 0.03em;
+}
+
+/* ------------------------------------------------------------- */
+/* --------------------- Seccion del titulo -------------------- */
+/* ------------------------------------------------------------- */
+
+.section-title{
+    text-align: center; 
     background: var(--background-2);
     letter-spacing: 0.06em;
 }
 .page-title {
     color: var(--background-color);
     font-weight: 900;
-    font-size: 44px;                    
+    font-size: 44px;
     line-height: 1.3;
     text-transform: uppercase;
 }
@@ -83,20 +209,9 @@ body {
     line-height: 30px;
 }
 
-.button-index:hover, .button-index:active, .button-index:focus,
-.briefcase-list-button:hover,.briefcase-list-button:hover,.briefcase-list-button:active{
-    text-shadow: 2px 2px 20px var(--background-color), 5px 5px 5px var(--body-color);
-}
-
-.name-section{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
-
-/* ----------Seccion caracteristicas---------- */
+/* ------------------------------------------------------------- */
+/* ------------------ Seccion caracteristicas ------------------ */
+/* ------------------------------------------------------------- */
 
 .Characters-list{
     letter-spacing: 0.03em;
@@ -113,14 +228,21 @@ body {
     color: var(--gray-color);
 }
 
-/* ----------Nuestro equipo---------- */
+/* ------------------------------------------------------------- */
+/* ---------------- Seccion A qué nos dedicamos ---------------- */
+/* ------------------------------------------------------------- */
+
+/* --------------------------------------------------------------*/
+/* ---------------------- Nuestro equipo ----------------------- */
+/* ------------------------------------------------------------- */
+
 .team{
     background: var(--background-botton);
     letter-spacing: 0.03em;
 }
 .team-list{
     text-align: center;
-    background: var(--background-1); 
+    background: var(--background-1);
 }
 
 .team-list-img{
@@ -139,8 +261,10 @@ body {
     color: var(--gray-color);
 }
 
+/* --------------------------------------------------------------*/
+/* -------------------------- Footer --------------------------- */
+/* ------------------------------------------------------------- */
 
-/* ----------Footer---------- */
 .footer-contact{
     background: var(--background-2);
     letter-spacing: 0.03em;
@@ -149,13 +273,13 @@ body {
 .footer-contact-list-dir {
     text-decoration: none;
     font-weight: 400;
-    line-height: 1.2;   
+    line-height: 1.2;
     color: var(--background-color);
 }
 
 .footer-contact-list-item{
     font-weight: 400;
-    line-height: 1.2; 
+    line-height: 1.2;
     color: var(--gray-color);
 }
 
@@ -163,9 +287,10 @@ body {
     color: var(--hover-color);
 }
 
-/* ------------------------------------------------------------------------------------------------------------ */
+/* --------------------------------------------------------------*/
+/* ------------------------ Portafolio ------------------------- */
+/* ------------------------------------------------------------- */
 
-/*--------------------Portafolio--------------------*/
 
 .briefcase-list-button {
     cursor: pointer;
@@ -188,13 +313,13 @@ body {
 .briefcase-list-item {
     cursor: pointer;
     background: var(--background-1);
-    border: 1px solid var(--background-botton); 
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); 
+    border: 1px solid var(--background-botton);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .briefcase-list-title {
     font-weight: 700;
-    font-size: 18px;    
+    font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
