@@ -37,8 +37,7 @@ ul{
 
 .section{
     display: flex;
-    padding-top: 94px ;
-    padding-bottom: 94px ;
+    padding: 94px 0;
 }
 
 /* ------------------------------------------------------------- */
@@ -106,13 +105,10 @@ ul{
     padding: 10px 32px;
 }
 
-/* ------------------ seccion caracteristicas ---------------- */
+/* -------------- seccion caracteristicas ----------- */
 
-.main-craracters, .Characters-list{
-    display: flex;
-    padding: 0;
-}
 .Characters-list{
+    display: flex;
     width: 100%;
     justify-content: space-between;
 }
@@ -132,6 +128,11 @@ ul{
 .Characters-list.characters-list-title:not(:last-child){
     margin-right: 30px;
 }
+
+/* ----------- seccion a que nos decicamos ---------- */
+
+
+
 
 
 
