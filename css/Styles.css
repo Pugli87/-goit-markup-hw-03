@@ -1,9 +1,15 @@
-*{
+*
+::after
+::before{
     box-sizing: border-box;
+}
+h1,h2,p,ul{
     margin: 0;
     padding: 0;
 }
+
 body {
+
     width: 1600px;
     font-size: 14px;
     font-family: "roboto", sans-serif;
@@ -11,6 +17,7 @@ body {
     color: var(--body-color);
     background:var(--background-1);
 }
+
 
 :root {
     --body-color:         #212121;
@@ -25,9 +32,10 @@ ul{
     list-style: none;
 }
 
-.logo,.menu-list-link, .contact-list-link, .footer-contact-list-item{
+a{
     text-decoration: none;
 }
+
 .container{
     width: 1200px;
     padding-left: 15px;
@@ -40,123 +48,12 @@ ul{
     padding: 94px 0;
 }
 
-/* ------------------------------------------------------------- */
-/* <------------------------> Flexbox <------------------------> */
-/* ------------------------------------------------------------- */
-
-/* -------------------------------------------------- */
-/* --------------------- Header --------------------- */
-/* -------------------------------------------------- */
-
-.cab{
-    padding-top: 31.25px ;
-    padding-bottom: 31.25px ;
-    width: 100%;
-    border-bottom: 1px solid #ECECEC;
-}
-
-.cab .menu, .cab .contact-list{
-    display: flex;
-    align-items: center;
-    width: 50%;
-}
-
-.cab .menu{   
-    justify-content: space-around;
-}
-
-.cab .contact-list{
-    justify-content: flex-end;
-}
-
-.header-cont, .menu-list{
-    display: flex;
-}
-
-.menu-list > .menu-list-item:not(:last-child),
-.contact-list > .contact-list-item:not(:last-child) {
-    margin-right: 50px;
-}
-
-/* -------------------------------------------------- */
-/* ---------------------- Main ---------------------- */
-/* -------------------------------------------------- */
-
-/* ------------------ seccion titulo ---------------- */
-
-
-.main-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.main-title .page-title{
-    display: block;
-    width: 696px;
-    height: 120px;
-    margin-bottom: 30px;
-}
-.main-title .button-index{
-    display: block;
-    padding: 10px 32px;
-}
-
-/* -------------- seccion caracteristicas ----------- */
-
-.Characters-list{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.Characters-list .characters-list-title{
-    display: block;
-    width: 270px;
-    padding-bottom: 10px;
-}
-.Characters-list .characters-list-text{
-    display: block;
-    align-items: baseline;
-    width: 270px;
-    /* border: #212121 1px solid; */
-}
-.craracters-list .Characters-list-text:not(:last-child),
-.Characters-list.characters-list-title:not(:last-child){
-    margin-right: 30px;
-}
-
-/* ----------- seccion a que nos decicamos ---------- */
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------------------- */
-/* --------------------- Footer --------------------- */
-/* -------------------------------------------------- */
-
-.footer-contact{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
 
 
 /* ------------------------------------------------------------- */
-/* ------------------------- cabecera -------------------------- */
+/* --------------------------- Header -------------------------- */
 /* ------------------------------------------------------------- */
+
 
 .logo {
     color: var(--hover-color);
@@ -188,13 +85,51 @@ ul{
     color: var(--gray-color);
 }
 
-.link:hover,.link:focus {
+.link:hover, .link:focus {
     color: var(--hover-color);
 }
 
-/* ------------------------------------------------------------- */
-/* -------------------- Cuerpo de la pagina -------------------- */
-/* ------------------------------------------------------------- */
+
+/* ------------------------------------------------------ */
+/* ----------------------> Flexbox <--------------------- */
+/* ------------------------------------------------------ */
+
+
+.cab{
+    padding-top: 31.25px ;
+    padding-bottom: 31.25px ;
+    width: 100%;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.cab .menu, .cab .contact-list{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.cab .menu{   
+    justify-content: space-around;
+}
+
+.cab .contact-list{
+    justify-content: flex-end;
+}
+
+.header-cont, .menu-list{
+    display: flex;
+}
+
+.menu-list > .menu-list-item:not(:last-child),
+.contact-list > .contact-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+
+/* ------------------------------------------------------ */
+/* ------------------------ Main ------------------------ */
+/* ------------------------------------------------------ */
+
 
 .name-section{
     font-weight: 700;
@@ -202,11 +137,12 @@ ul{
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
+    padding-bottom: 55.05px;
 }
 
-/* ------------------------------------------------------------- */
-/* --------------------- Seccion del titulo -------------------- */
-/* ------------------------------------------------------------- */
+
+/* ----------------- Seccion del titulo ----------------- */
+
 
 .section-title{
     text-align: center; 
@@ -234,9 +170,32 @@ ul{
     line-height: 30px;
 }
 
-/* ------------------------------------------------------------- */
-/* ------------------ Seccion caracteristicas ------------------ */
-/* ------------------------------------------------------------- */
+/* ----------------------> Flexbox <--------------------- */
+
+
+.main-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.main-title .page-title{
+    display: block;
+    width: 696px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.main-title .button-index{
+    display: block;
+    padding: 10px 32px;
+}
+
+
+/* -------------- Seccion caracteristicas --------------- */
+
 
 .Characters-list{
     letter-spacing: 0.03em;
@@ -253,13 +212,45 @@ ul{
     color: var(--gray-color);
 }
 
-/* ------------------------------------------------------------- */
-/* ---------------- Seccion A qué nos dedicamos ---------------- */
-/* ------------------------------------------------------------- */
 
-/* --------------------------------------------------------------*/
-/* ---------------------- Nuestro equipo ----------------------- */
-/* ------------------------------------------------------------- */
+/* ----------------------> Flexbox <--------------------- */
+
+
+.Characters-list{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Characters-list .characters-list-title{
+    display: block;
+    width: 270px;
+    padding-bottom: 10px;
+}
+.Characters-list .characters-list-text{
+    display: block;
+    align-items: baseline;
+    width: 270px;
+    /* border: #212121 1px solid; */
+}
+.craracters-list .Characters-list-text:not(:last-child),
+.Characters-list.characters-list-title:not(:last-child){
+    margin-right: 30px;
+}
+
+
+
+/* ------------ Seccion A qué nos dedicamos ------------- */
+
+
+.products-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ------------------- Nuestro equipo ------------------- */
+
 
 .team{
     background: var(--background-botton);
@@ -267,11 +258,11 @@ ul{
 }
 .team-list{
     text-align: center;
-    background: var(--background-1);
+    background: var(--background-botton);
 }
 
 .team-list-img{
-    background-color: var(--background-color);
+    background: var(--background-color);
 }
 
 .team-list-name{
@@ -286,35 +277,102 @@ ul{
     color: var(--gray-color);
 }
 
-/* --------------------------------------------------------------*/
-/* -------------------------- Footer --------------------------- */
-/* ------------------------------------------------------------- */
+
+/* ----------------------> Flexbox <--------------------- */
+
+
+.team-list:not(:last-child)
+.images{
+    margin-right: 30px;
+}
+.team-list{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+
+}
+.team-list-img{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-list > .team-list-img:not(:last-child){
+    margin-right: 30px;
+}
+.team-list  .team-list-name{
+padding-top: 30px;
+padding-bottom: 10px;
+}
+.team-list .team-list-text{
+padding-bottom: 30px ;
+}
+
+
+/* ------------------------------------------------------ */
+/* ---------------------- Footer ------------------------ */
+/* ------------------------------------------------------ */
+
 
 .footer-contact{
     background: var(--background-2);
     letter-spacing: 0.03em;
 }
-
-.footer-contact-list-dir {
-    text-decoration: none;
+.footer-contact-list{
     font-weight: 400;
     line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.footer-contact-list-dir {
     color: var(--background-color);
 }
 
 .footer-contact-list-item{
-    font-weight: 400;
-    line-height: 1.2;
     color: var(--gray-color);
+
 }
 
 .footer-contact-list-item:hover,.footer-contact-list.item:focus{
     color: var(--hover-color);
 }
 
-/* --------------------------------------------------------------*/
-/* ------------------------ Portafolio ------------------------- */
-/* ------------------------------------------------------------- */
+
+/* ------------------------------------------------------ */
+/* ----------------------> Flexbox <--------------------- */
+/* ------------------------------------------------------ */
+
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-contact .logo{
+    width: 145px;
+    display: flex;
+    padding-bottom: 9px;
+    }
+
+.footer-contact-list{
+    width: 231px;
+    display: flex;
+    flex-direction: column;
+}
+.footer-contact-list .link{
+    margin: 4.5px 0;
+}
+
+
+
+/* ----------------------------------------------------- */
+/* -------------------- Portafolio --------------------- */
+/* ----------------------------------------------------- */
 
 
 .briefcase-list-button {
@@ -338,8 +396,7 @@ ul{
 .briefcase-list-item {
     cursor: pointer;
     background: var(--background-1);
-    border: 1px solid var(--background-botton);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 
 .briefcase-list-title {
@@ -347,6 +404,7 @@ ul{
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    text-align: center;
 }
 
 .briefcase-list-text {
@@ -354,4 +412,55 @@ ul{
     line-height: 30px;
     letter-spacing: 0.03em;
     color:var(--gray-color);
+}
+
+
+/* ------------------------------------------------------ */
+/* ----------------------> Flexbox <--------------------- */
+/* ------------------------------------------------------ */
+
+
+.briefcase-list{  /*PADRE*/
+    display: flex;
+    justify-content: center;
+}
+.briefcase-list > .item{
+    padding-bottom: 50PX;
+    margin-right: 8px;
+}
+.briefcase-list .briefcase-list-button{
+    display: block;
+    justify-content: center;
+    padding: 6px 24px;
+}
+
+/* --------------- Contenedor de tarjetas --------------- */
+.card-set{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350;
+    gap: 30px;
+    left: calc(50% - 370px/3 - 400px);
+    top: calc(50% - 404px/3 - 464px); 
+}
+
+.briefcase-list-item{
+    /* flex-basis: calc((100% - 30px) / 3); */
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+} 
+
+.briefcase-list-item > img {
+    width: 370px;
+    display: flex
+}
+
+.card-set h2{
+    width: 322px;
+    margin-left: 24px;
+    margin-right: 24px;
+    justify-content: center;
 }
