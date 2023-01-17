@@ -3,7 +3,7 @@
 ::before{
     box-sizing: border-box;
 }
-h1,h2,p,ul{
+h1,h2,h3,h4,h5,h6,p,ul{
     margin: 0;
     padding: 0;
 }
@@ -27,14 +27,38 @@ body {
     --background-2:       #2F303A;
     --hover-color:        #2196F3;
 }
+p{
+    margin-top: 0;   
+}
 
 ul{
     list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 a{
     text-decoration: none;
 }
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+} 
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+} 
 
 .container{
     width: 1200px;
@@ -44,7 +68,6 @@ a{
 }
 
 .section{
-    display: flex;
     padding: 94px 0;
 }
 
@@ -94,36 +117,41 @@ a{
 /* ----------------------> Flexbox <--------------------- */
 /* ------------------------------------------------------ */
 
-
 .cab{
-    padding-top: 31.25px ;
-    padding-bottom: 31.25px ;
-    width: 100%;
     border-bottom: 1px solid #ECECEC;
 }
 
-.cab .menu, .cab .contact-list{
+.logo{
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+}
+
+
+.cab .menu, .menu-list, .cab .contact-list{
     display: flex;
     align-items: center;
-    width: 50%;
 }
 
-.cab .menu{   
-    justify-content: space-around;
-}
 
 .cab .contact-list{
-    justify-content: flex-end;
+display: flex;
 }
 
-.header-cont, .menu-list{
-    display: flex;
+
+.menu-list-link, .contact-list-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .menu-list > .menu-list-item:not(:last-child),
 .contact-list > .contact-list-item:not(:last-child) {
     margin-right: 50px;
 }
+.contact-list-link{
+    
+}
+
 
 
 /* ------------------------------------------------------ */
@@ -137,7 +165,7 @@ a{
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    padding-bottom: 55.05px;
+    margin-bottom: 55.05px;
 }
 
 
@@ -185,7 +213,6 @@ a{
 .main-title .page-title{
     display: block;
     width: 696px;
-    height: 120px;
     margin-bottom: 30px;
 }
 .main-title .button-index{
@@ -219,13 +246,17 @@ a{
 .Characters-list{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 30px;
+}
+.Characters-list li{
+    flex-basis: calc((100% - 30px) / 4);
 }
 
 .Characters-list .characters-list-title{
     display: block;
     width: 270px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 .Characters-list .characters-list-text{
     display: block;
@@ -289,26 +320,28 @@ a{
     padding: 0;
     width: 100%;
     display: flex;
-    align-content: flex-start;
+    gap: 37px ;
+    /* align-content: flex-start; */
 
 }
 .team-list-img{
     width: 270px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-basis: calc((100% - 30% ) / 3);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.team-list > .team-list-img:not(:last-child){
-    margin-right: 30px;
+
+.text-cont{
+    padding: 30px;
+
 }
+
 .team-list  .team-list-name{
-padding-top: 30px;
-padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 .team-list .team-list-text{
-padding-bottom: 30px ;
 }
 
 
@@ -348,15 +381,15 @@ padding-bottom: 30px ;
 
 .footer-contact{
     display: flex;
-    flex-direction: column;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
 .footer-contact .logo{
+    padding: 0;
     width: 145px;
     display: flex;
-    padding-bottom: 9px;
+    margin-bottom: 9px;
     }
 
 .footer-contact-list{
@@ -365,7 +398,7 @@ padding-bottom: 30px ;
     flex-direction: column;
 }
 .footer-contact-list .link{
-    margin: 4.5px 0;
+    margin-bottom: 9px;
 }
 
 
@@ -404,10 +437,11 @@ padding-bottom: 30px ;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    text-align: center;
+    text-align: left;
 }
 
 .briefcase-list-text {
+    text-align: left;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
@@ -423,9 +457,9 @@ padding-bottom: 30px ;
 .briefcase-list{  /*PADRE*/
     display: flex;
     justify-content: center;
+    margin: 30px;
 }
 .briefcase-list > .item{
-    padding-bottom: 50PX;
     margin-right: 8px;
 }
 .briefcase-list .briefcase-list-button{
@@ -440,27 +474,22 @@ padding-bottom: 30px ;
     flex-wrap: wrap;
     width: 350;
     gap: 30px;
-    left: calc(50% - 370px/3 - 400px);
-    top: calc(50% - 404px/3 - 464px); 
 }
 
 .briefcase-list-item{
-    /* flex-basis: calc((100% - 30px) / 3); */
+    flex-basis: calc((100% - 60px) / 3);
     justify-content: center;
-    text-align: center;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06), 
     1px 4px 6px rgba(0, 0, 0, 0.16);
 } 
 
-.briefcase-list-item > img {
-    width: 370px;
-    display: flex
-}
 
 .card-set h2{
     width: 322px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-bottom: 4px;
     justify-content: center;
+}
+.text-cont-1{
+    padding: 20px 24px;
 }
