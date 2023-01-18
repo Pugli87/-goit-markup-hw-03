@@ -1,8 +1,9 @@
-*
-::after
-::before{
+*,
+*::after,
+*::before{
     box-sizing: border-box;
 }
+
 h1,h2,h3,h4,h5,h6,p,ul{
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 
 body {
 
-    width: 1600px;
+    /* width: 1600px; */
     font-size: 14px;
     font-family: "roboto", sans-serif;
     letter-spacing:  10px;
@@ -116,6 +117,9 @@ img {
 /* ------------------------------------------------------ */
 /* ----------------------> Flexbox <--------------------- */
 /* ------------------------------------------------------ */
+.box{
+    display: flex;
+}
 
 .cab{
     border-bottom: 1px solid #ECECEC;
@@ -126,7 +130,6 @@ img {
     padding-bottom: 25px;
     margin-right: 93px;
 }
-
 
 .cab .menu, .menu-list, .cab .contact-list{
     display: flex;
@@ -148,10 +151,9 @@ display: flex;
 .contact-list > .contact-list-item:not(:last-child) {
     margin-right: 50px;
 }
-.contact-list-link{
-    
+.contact-list{
+    margin-left: 344px;
 }
-
 
 
 /* ------------------------------------------------------ */
@@ -201,10 +203,10 @@ display: flex;
 /* ----------------------> Flexbox <--------------------- */
 
 
-.main-title{
+.section-title{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding-top: 94px;
     padding-bottom: 94px;
@@ -273,7 +275,9 @@ display: flex;
 
 /* ------------ Seccion A qué nos dedicamos ------------- */
 
-
+.product{
+    padding-top: 0;
+}
 .products-list{
     display: flex;
     justify-content: space-between;
@@ -457,7 +461,7 @@ display: flex;
 .briefcase-list{  /*PADRE*/
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin-bottom: 30px;
 }
 .briefcase-list > .item{
     margin-right: 8px;
