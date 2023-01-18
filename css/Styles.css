@@ -249,7 +249,7 @@ display: flex;
     gap: 30px;
 }
 .Characters-list li{
-    flex-basis: calc ((100% - 120px) / 4);
+    flex-basis: calc((100% - 120px) / 4);
 }
 
 .Characters-list .characters-list-title{
@@ -282,8 +282,7 @@ display: flex;
     gap: 24px;
 }
 .products-list-img{
-    width: 373.16px;
-    flex-basis: calc ((100%-60px)/3);
+    flex-basis: calc((100% - 60px)/3);
 }
 
 
