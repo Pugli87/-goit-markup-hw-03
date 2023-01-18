@@ -204,20 +204,19 @@ display: flex;
 
 
 .section-title{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
-.main-title .page-title{
+.section-title .page-title{
+    margin: 0 auto;
+    padding: 0;
     display: block;
-    width: 696px;
+    max-width: 690px;
     margin-bottom: 30px;
 }
-.main-title .button-index{
+.section-title .button-index{
+    margin: 0 auto;
     display: block;
     padding: 10px 32px;
 }
@@ -247,12 +246,11 @@ display: flex;
 
 .Characters-list{
     display: flex;
-    width: 100%;
-    /* justify-content: space-between; */
+    flex-wrap: wrap;
     gap: 30px;
 }
 .Characters-list li{
-    flex-basis: calc((100% - 30px) / 4);
+    flex-basis: calc ((100% - 120px) / 4);
 }
 
 .Characters-list .characters-list-title{
@@ -279,8 +277,14 @@ display: flex;
     padding-top: 0;
 }
 .products-list{
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.products-list-img{
+    width: 373.16px;
+    flex-basis: calc ((100%-60px)/3);
 }
 
 
@@ -316,23 +320,23 @@ display: flex;
 /* ----------------------> Flexbox <--------------------- */
 
 
-.team-list:not(:last-child)
+/* .team-list:not(:last-child)
 .images{
     margin-right: 30px;
-}
+} */
+
 .team-list{
     padding: 0;
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 37px ;
-    /* align-content: flex-start; */
-
 }
+
 .team-list-img{
     width: 270px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    flex-basis: calc((100% - 30% ) / 3);
+    flex-basis: calc((100% - 111px ) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -345,9 +349,6 @@ display: flex;
 .team-list  .team-list-name{
     margin-bottom: 10px;
 }
-.team-list .team-list-text{
-}
-
 
 /* ------------------------------------------------------ */
 /* ---------------------- Footer ------------------------ */
