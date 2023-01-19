@@ -10,8 +10,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 body {
-
-    /* width: 1600px; */
     font-size: 14px;
     font-family: "roboto", sans-serif;
     letter-spacing:  10px;
@@ -28,6 +26,7 @@ body {
     --background-2:       #2F303A;
     --hover-color:        #2196F3;
 }
+
 p{
     margin-top: 0;   
 }
@@ -117,6 +116,8 @@ img {
 /* ------------------------------------------------------ */
 /* ----------------------> Flexbox <--------------------- */
 /* ------------------------------------------------------ */
+
+
 .box{
     display: flex;
 }
@@ -151,6 +152,7 @@ display: flex;
 .contact-list > .contact-list-item:not(:last-child) {
     margin-right: 50px;
 }
+
 .contact-list{
     margin-left: auto;
 }
@@ -179,6 +181,7 @@ display: flex;
     background: var(--background-2);
     letter-spacing: 0.06em;
 }
+
 .page-title {
     color: var(--background-color);
     font-weight: 900;
@@ -215,6 +218,7 @@ display: flex;
     max-width: 690px;
     margin-bottom: 30px;
 }
+
 .section-title .button-index{
     padding: 10px 32px;
 }
@@ -247,21 +251,25 @@ display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
+
 .Characters-list li{
     flex-basis: calc((100% - 120px) / 4);
 }
+
 
 .Characters-list .characters-list-title{
     display: block;
     width: 270px;
     margin-bottom: 10px;
 }
+
 .Characters-list .characters-list-text{
     display: block;
     align-items: baseline;
     width: 270px;
     /* border: #212121 1px solid; */
 }
+
 .craracters-list .Characters-list-text:not(:last-child),
 .Characters-list.characters-list-title:not(:last-child){
     margin-right: 30px;
@@ -274,12 +282,14 @@ display: flex;
 .product{
     padding-top: 0;
 }
+
 .products-list{
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
+
 .products-list-img{
     flex-basis: calc((100% - 60px)/3);
 }
@@ -292,6 +302,7 @@ display: flex;
     background: var(--background-botton);
     letter-spacing: 0.03em;
 }
+
 .team-list{
     text-align: center;
     background: var(--background-botton);
@@ -317,11 +328,6 @@ display: flex;
 /* ----------------------> Flexbox <--------------------- */
 
 
-/* .team-list:not(:last-child)
-.images{
-    margin-right: 30px;
-} */
-
 .team-list{
     padding: 0;
     display: flex;
@@ -331,7 +337,6 @@ display: flex;
 
 .team-list-img{
     width: 270px;
-    /* display: flex; */
     flex-direction: column;
     flex-basis: calc((100% - 111px ) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -356,6 +361,7 @@ display: flex;
     background: var(--background-2);
     letter-spacing: 0.03em;
 }
+
 .footer-contact-list{
     font-weight: 400;
     line-height: 1.2;
@@ -392,13 +398,14 @@ display: flex;
     width: 145px;
     display: flex;
     margin-bottom: 9px;
-    }
+}
 
 .footer-contact-list{
     width: 231px;
     display: flex;
     flex-direction: column;
 }
+
 .footer-contact-list .link{
     margin-bottom: 9px;
 }
@@ -461,9 +468,11 @@ display: flex;
     justify-content: center;
     margin-bottom: 30px;
 }
+
 .briefcase-list > .item{
     margin-right: 8px;
 }
+
 .briefcase-list .briefcase-list-button{
     display: block;
     justify-content: center;
@@ -492,6 +501,7 @@ display: flex;
     margin-bottom: 4px;
     justify-content: center;
 }
+
 .text-cont-1{
     padding: 20px 24px;
 }
